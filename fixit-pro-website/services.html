@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="fixitpro_logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - FixIt Pro Services</title>
+  <meta name="description" content="Comprehensive facility management, technical maintenance, cleaning, security, landscaping, and pest control services in Hyderabad and beyond." />
+  <style>
+    :root {
+      --primary: #1769aa;
+      --secondary: #ffd600;
+      --accent: #00bfae;
+      --dark: #102542;
+      --light: #f6f9fc;
+      --gray: #64748b;
+    }
+    body { margin:0; font-family:'Segoe UI',Arial,sans-serif; background:var(--light); color:var(--dark);}
+    a { color:var(--primary); text-decoration:none;}
+    a:hover { color:var(--accent); }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.5rem;}
+    /* Header/Footer same as index.html */
+    header,footer {background:#fff;box-shadow:0 2px 8px rgba(23,105,170,0.07);}
+    .topbar {background:var(--primary);color:#fff;font-size:0.97rem;padding:0.4rem 0;}
+    .topbar .container {display:flex;justify-content:space-between;align-items:center;}
+    .topbar .contact {display:flex;gap:2.5rem;}
+    .main-header {display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;}
+    .logo-group {display:flex;align-items:center;}
+    .logo-group img {height:52px;width:52px;border-radius:50%;margin-right:1rem;background:#fff;border:2px solid var(--primary);}
+    .logo-group h1 {margin:0;font-size:2rem;font-weight:bold;color:var(--primary);}
+    .logo-group p {margin:0;color:var(--gray);font-size:1.03rem;}
+    nav.main-nav {display:flex;gap:2rem;}
+    nav.main-nav a {padding:0.5rem 1rem;border-radius:0.375rem;font-weight:500;font-size:1rem;color:var(--dark);transition:background 0.2s,color 0.2s;}
+    nav.main-nav a.active,nav.main-nav a:hover {color:var(--primary);background:#e3f2fd;}
+    @media (max-width:900px){.container{padding:0 0.6rem;}nav.main-nav{gap:0.7rem;}}
+    @media (max-width:700px){.main-header{flex-direction:column;gap:1rem;align-items:flex-start;}nav.main-nav{flex-direction:column;gap:0.2rem;width:100%;}}
+
+    .services-section {padding:4rem 0;}
+    .services-section h2 {text-align:center;font-size:2.2rem;font-weight:bold;color:var(--dark);margin-bottom:0.7rem;}
+    .services-section p {text-align:center;font-size:1.1rem;color:var(--gray);margin-bottom:2.5rem;}
+    .services-list {display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    @media (max-width:950px){.services-list{grid-template-columns:repeat(2,1fr);}}
+    @media (max-width:600px){.services-list{grid-template-columns:1fr;}}
+    .service-card {background:#fff;border-radius:1rem;box-shadow:0 2px 20px rgba(23,105,170,0.08);overflow:hidden;display:flex;flex-direction:column;}
+    .service-card img {width:100%;height:180px;object-fit:cover;}
+    .service-card .info {padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+    .service-card .info h3 {margin:0 0 0.5rem 0;font-size:1.3rem;color:var(--primary);}
+    .service-card .info p {color:var(--gray);flex:1;}
+    .service-card .info a {color:var(--primary);font-weight:500;margin-top:1rem;display:inline-block;}
+    .service-card .info a:hover {color:var(--accent);}
+    /* Footer */
+    footer {background:var(--dark);color:#fff;}
+    .footer-content {display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:4rem 0;}
+    @media (max-width:900px){.footer-content{grid-template-columns:repeat(2,1fr);}}
+    @media (max-width:600px){.footer-content{grid-template-columns:1fr;}}
+    .footer-logo {display:flex;align-items:center;margin-bottom:1.2rem;}
+    .footer-logo img {height:40px;width:40px;border-radius:50%;margin-right:1rem;background:#fff;border:2px solid var(--primary);}
+    .footer-logo h3 {margin:0;font-size:1.25rem;font-weight:bold;}
+    .footer-logo p {margin:0;color:#d1d5db;font-size:1rem;}
+    .footer-desc {color:#d1d5db;margin-bottom:1.2rem;}
+    .footer-social a {color:#d1d5db;margin-right:0.7rem;font-size:1.3rem;transition:color 0.2s;}
+    .footer-social a:hover {color:var(--secondary);}
+    .footer-links ul,.footer-services ul {list-style:none;margin:0;padding:0;}
+    .footer-links a,.footer-services a {color:#d1d5db;transition:color 0.2s;}
+    .footer-links a:hover,.footer-services a:hover {color:#fff;}
+    .footer-contact {color:#d1d5db;}
+    .footer-bottom {border-top:1px solid #243b53;padding:2rem 0;text-align:center;color:#d1d5db;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="contact">
+          <span>📞 7013377216</span>
+          <span>✉️ info@fixitproservices.in</span>
+        </div>
+        <div class="slogan" style="display:none;display:block;">Professional Maintenance & Repair Solutions</div>
+      </div>
+    </div>
+    <div class="container main-header">
+      <a href="index.html" class="logo-group">
+        <img src="fixitpro_logo.jpg" alt="FixIt Pro Services" />
+        <div>
+          <h1>FixIt Pro</h1>
+          <p>Services</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="services-section">
+      <h2>Our Services</h2>
+      <p>From malls to homes, we cover every facility and maintenance need.</p>
+      <div class="services-list">
+        <div class="service-card" id="facility-management">
+          <img src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&w=600" alt="Facility Management" />
+          <div class="info">
+            <h3>Facility Management</h3>
+            <p>End-to-end management for commercial and residential properties, ensuring smooth operation and efficiency for all building systems, staff, and tenant needs.</p>
+          </div>
+        </div>
+        <div class="service-card" id="technical-maintenance">
+          <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&w=600" alt="Technical Maintenance" />
+          <div class="info">
+            <h3>Technical Maintenance</h3>
+            <p>Skilled repair and upkeep of HVAC, electrical, plumbing, lifts, and all technical systems. Both preventive and emergency support available 24/7.</p>
+          </div>
+        </div>
+        <div class="service-card" id="cleaning-services">
+          <img src="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&w=600" alt="Cleaning Services" />
+          <div class="info">
+            <h3>Cleaning Services</h3>
+            <p>Daily, deep, and specialized cleaning for every space. Our professional team ensures hygiene and a sparkling environment for all clients.</p>
+          </div>
+        </div>
+        <div class="service-card" id="security-services">
+          <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&w=600" alt="Security Services" />
+          <div class="info">
+            <h3>Security Services</h3>
+            <p>Trained security personnel, CCTV monitoring, and access control to ensure safety for your property and peace of mind for everyone.</p>
+          </div>
+        </div>
+        <div class="service-card" id="landscaping">
+          <img src="https://images.pexels.com/photos/106936/pexels-photo-106936.jpeg?auto=compress&w=600" alt="Landscaping & Gardening" />
+          <div class="info">
+            <h3>Landscaping & Gardening</h3>
+            <p>Beautiful, eco-friendly landscapes and regular garden maintenance to keep your spaces green, fresh, and inviting year-round.</p>
+          </div>
+        </div>
+        <div class="service-card" id="pest-control">
+          <img src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&w=600" alt="Pest Control" />
+          <div class="info">
+            <h3>Pest Control</h3>
+            <p>Safe, effective pest control solutions for homes and businesses, protecting your environment from insects, rodents, and other pests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="fixitpro_logo.jpg" alt="FixIt Pro Services" />
+          <div>
+            <h3>FixIt Pro</h3>
+            <p>Services</p>
+          </div>
+        </div>
+        <div class="footer-desc">
+          Professional maintenance and repair solutions for commercial and residential properties.
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/fixitproservices" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col footer-links">
+        <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-services">
+        <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Our Services</h3>
+        <ul>
+          <li><a href="services.html#facility-management">Facility Management</a></li>
+          <li><a href="services.html#technical-maintenance">Technical Maintenance</a></li>
+          <li><a href="services.html#cleaning-services">Cleaning Services</a></li>
+          <li><a href="services.html#security-services">Security Services</a></li>
+          <li><a href="services.html#landscaping">Landscaping & Gardening</a></li>
+          <li><a href="services.html#pest-control">Pest Control</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Contact Info</h3>
+        <div>📞 7013377216</div>
+        <div>✉️ info@fixitproservices.in</div>
+        <div>📍 Hyderabad</div>
+        <div>⏰ 24/7 Emergency Service</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 FixIt Pro Services. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

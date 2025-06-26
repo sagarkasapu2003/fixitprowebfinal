@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="fixitpro_logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixIt Pro Services - Professional Maintenance & Repair Solutions</title>
+    <meta name="description" content="FixIt Pro Services provides comprehensive maintenance and repair solutions for commercial and residential properties." />
+    <meta name="keywords" content="maintenance services, repair solutions, facility management, commercial maintenance, residential repair, professional services" />
+    <meta property="og:title" content="FixIt Pro Services - Professional Maintenance & Repair Solutions" />
+    <meta property="og:description" content="Comprehensive maintenance and repair solutions for commercial and residential properties." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fixitproservices.in" />
+    <link rel="canonical" href="https://fixitproservices.in" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+        background: #fff;
+        color: #1a202c;
+      }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { color: #1e40af; text-decoration: underline; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+      header {
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .topbar {
+        background: #1e3a8a;
+        color: #fff;
+        font-size: 0.95rem;
+        padding: 0.35rem 0;
+      }
+      .topbar .container {
+        display: flex; justify-content: space-between; align-items: center;
+      }
+      .topbar .contact { display: flex; gap: 2.5rem; }
+      .topbar .contact span { margin-left: 0.5rem; }
+      .main-header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 1.1rem 0;
+      }
+      .logo-group { display: flex; align-items: center; }
+      .logo-group img { height: 48px; width: 48px; border-radius: 50%; margin-right: 1rem; }
+      .logo-group h1 { margin: 0; font-size: 2rem; font-weight: bold; color: #1e3a8a; }
+      .logo-group p { margin: 0; color: #64748b; font-size: 1.03rem; }
+      nav.main-nav { display: flex; gap: 2rem;}
+      nav.main-nav a {
+        padding: 0.5rem 1rem; border-radius: 0.375rem;
+        font-weight: 500; font-size: 1rem; color: #374151;
+        transition: background 0.2s, color 0.2s;
+      }
+      nav.main-nav a.active,
+      nav.main-nav a:hover { color: #2563eb; background: #f0f6ff; }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .container { padding: 0 0.6rem; }
+        nav.main-nav { gap: 0.7rem; }
+      }
+      @media (max-width: 700px) {
+        .main-header { flex-direction: column; gap: 1rem; align-items: flex-start;}
+        nav.main-nav { flex-direction: column; gap: 0.2rem; width: 100%; }
+      }
+      /* Hero section */
+      .hero {
+        background: linear-gradient(to right, #1e3a8a, #2563eb);
+        color: #fff;
+        position: relative;
+        padding: 4rem 0;
+        overflow: hidden;
+      }
+      .hero .overlay {
+        position: absolute; inset: 0; background: #000; opacity: 0.17;
+      }
+      .hero .content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+      }
+      .hero h1 { font-size: 2.7rem; margin-bottom: 1rem; font-weight: bold; }
+      .hero h1 span { color: #fde047; }
+      .hero p { font-size: 1.2rem; color: #dbeafe; margin-bottom: 2rem;}
+      .hero .buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .hero .buttons a {
+        display: inline-block; padding: 0.85rem 2.1rem;
+        border-radius: 0.6rem; font-weight: 600; font-size: 1rem;
+        transition: background 0.2s, color 0.2s, border 0.2s;
+      }
+      .hero .buttons a.primary {
+        background: #fde047; color: #1e3a8a;
+      }
+      .hero .buttons a.primary:hover { background: #facc15; }
+      .hero .buttons a.secondary {
+        border: 2px solid #fff; color: #fff; background: transparent;
+      }
+      .hero .buttons a.secondary:hover {
+        background: #fff; color: #1e3a8a;
+      }
+      .hero-video { background: #000; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 20px rgba(30,58,138,0.15); }
+      .hero-video video, .hero-video img { width: 100%; display: block; }
+      /* Stats */
+      .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; background: #f8fafc; padding: 3rem 0;}
+      .stat { text-align: center; }
+      .stat .icon { 
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 64px; height: 64px; border-radius: 50%;
+        background: #2563eb; color: #fff; font-size: 2rem; margin-bottom: 1rem;
+      }
+      .stat .value { font-size: 2rem; font-weight: bold; color: #1e293b; }
+      .stat .label { color: #64748b; }
+      @media (max-width:900px) {.stats { grid-template-columns: repeat(2,1fr); }}
+      @media (max-width:600px) {.stats { grid-template-columns: 1fr; }}
+      /* Services */
+      .services-section { padding: 4rem 0;}
+      .services-section h2 { text-align: center; font-size: 2.5rem; font-weight: bold; color: #0f172a; margin-bottom: 0.7rem;}
+      .services-section p { text-align: center; font-size: 1.1rem; color: #64748b; margin-bottom: 2.5rem;}
+      .services-list { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem;}
+      @media (max-width: 950px) {.services-list { grid-template-columns: repeat(2,1fr); }}
+      @media (max-width: 600px) {.services-list { grid-template-columns: 1fr; }}
+      .service-card {
+        background: #fff; border-radius: 1rem; box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+        overflow: hidden; transition: box-shadow 0.2s;
+        display: flex; flex-direction: column;
+      }
+      .service-card img { width: 100%; height: 180px; object-fit: cover; }
+      .service-card .info { padding: 1.5rem; flex: 1; display: flex; flex-direction: column;}
+      .service-card .info h3 { margin: 0 0 0.5rem 0; font-size: 1.3rem; color: #1e293b; }
+      .service-card .info p { color: #64748b; flex: 1;}
+      .service-card .info a { color: #2563eb; font-weight: 500; margin-top: 1rem; display: inline-block;}
+      .service-card .info a:hover { color: #1e40af; }
+      /* Testimonials */
+      .testimonials-section { background: #f8fafc; padding: 4rem 0;}
+      .testimonials-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;}
+      @media (max-width: 900px) {.testimonials-list { grid-template-columns: 1fr; }}
+      .testimonial-card {
+        background: #fff; border-radius: 1rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        padding: 2rem;
+      }
+      .testimonial-card .stars { color: #fde047; margin-bottom: 1rem; }
+      .testimonial-card .review { color: #64748b; font-style: italic; margin-bottom: 1.5rem; }
+      .testimonial-card .client { display: flex; align-items: center;}
+      .testimonial-card .client img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; margin-right: 1rem;}
+      .testimonial-card .client-name { font-weight: bold; color: #1e293b; }
+      .testimonial-card .client-role { color: #64748b; font-size: 0.97rem;}
+      /* CTA section */
+      .cta-section { background: #1e3a8a; color: #fff; text-align: center; padding: 4rem 0;}
+      .cta-section h2 { font-size: 2.4rem; font-weight: bold; margin-bottom: 1rem;}
+      .cta-section p { font-size: 1.2rem; color: #bfdbfe; margin-bottom: 2rem;}
+      .cta-section a {
+        display: inline-block; padding: 0.9rem 2.1rem; border-radius: 0.6rem; font-weight: 600; font-size: 1rem;
+        background: #fde047; color: #1e3a8a; transition: background 0.2s;
+      }
+      .cta-section a:hover { background: #facc15;}
+      /* Footer */
+      footer { background: #111827; color: #fff;}
+      .footer-content { display: grid; grid-template-columns: repeat(4,1fr); gap: 2.5rem; padding: 4rem 0;}
+      @media (max-width: 900px) {.footer-content { grid-template-columns: repeat(2,1fr); }}
+      @media (max-width: 600px) {.footer-content { grid-template-columns: 1fr; }}
+      .footer-col { }
+      .footer-logo { display: flex; align-items: center; margin-bottom: 1.2rem;}
+      .footer-logo img { height: 40px; width: 40px; border-radius: 50%; margin-right: 1rem;}
+      .footer-logo h3 { margin: 0; font-size: 1.25rem; font-weight: bold;}
+      .footer-logo p { margin: 0; color: #d1d5db; font-size: 1rem;}
+      .footer-desc { color: #d1d5db; margin-bottom: 1.2rem;}
+      .footer-social a { color: #d1d5db; margin-right: 0.7rem; font-size: 1.3rem; transition: color 0.2s;}
+      .footer-social a:hover { color: #60a5fa; }
+      .footer-links ul, .footer-services ul { list-style: none; margin: 0; padding: 0;}
+      .footer-links a, .footer-services a { color: #d1d5db; transition: color 0.2s;}
+      .footer-links a:hover, .footer-services a:hover { color: #fff;}
+      .footer-contact { color: #d1d5db;}
+      .footer-bottom { border-top: 1px solid #1f2937; padding: 2rem 0; text-align: center; color: #d1d5db;}
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="topbar">
+        <div class="container">
+          <div class="contact">
+            <span>📞 +91 7013377216</span>
+            <span>✉️ info@fixitproservices.in</span>
+          </div>
+          <div class="slogan" style="display:none;display:block;">Professional Maintenance & Repair Solutions</div>
+        </div>
+      </div>
+      <div class="container main-header">
+        <a href="index.html" class="logo-group">
+          <img src="fixitpro_logo.jpg" alt="FixIt Pro Services" />
+          <div>
+            <h1>FixIt Pro</h1>
+            <p>Services</p>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="overlay"></div>
+        <div class="container content">
+          <div>
+            <h1>
+              Professional<span> Maintenance</span><br />& Repair Solutions
+            </h1>
+            <p>
+              Trusted by leading malls and commercial properties across India. 
+              We provide comprehensive facility management and maintenance services.
+            </p>
+            <div class="buttons">
+              <a href="services.html" class="primary">Our Services</a>
+              <a href="contact.html" class="secondary">Get Quote</a>
+            </div>
+          </div>
+          <div>
+            <div class="hero-video">
+              <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Facility Management" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats">
+        <div class="stat">
+          <div class="icon">👥</div>
+          <div class="value">500+</div>
+          <div class="label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="icon">🏆</div>
+          <div class="value">10+</div>
+          <div class="label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="icon">✅</div>
+          <div class="value">1000+</div>
+          <div class="label">Projects Completed</div>
+        </div>
+        <div class="stat">
+          <div class="icon">⏰</div>
+          <div class="value">24/7</div>
+          <div class="label">Support Available</div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section">
+        <div class="container">
+          <h2>Our Services</h2>
+          <p>We provide comprehensive maintenance and repair solutions tailored to your needs</p>
+          <div class="services-list">
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Facility Management" />
+              <div class="info">
+                <h3>Facility Management</h3>
+                <p>Comprehensive facility management solutions for commercial properties</p>
+                <a href="services.html#facility-management">Learn More</a>
+              </div>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Technical Maintenance" />
+              <div class="info">
+                <h3>Technical Maintenance</h3>
+                <p>Expert technical maintenance and repair services</p>
+                <a href="services.html#technical-maintenance">Learn More</a>
+              </div>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Cleaning Services" />
+              <div class="info">
+                <h3>Cleaning Services</h3>
+                <p>Professional cleaning and housekeeping services</p>
+                <a href="services.html#cleaning-services">Learn More</a>
+              </div>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Security Services" />
+              <div class="info">
+                <h3>Security Services</h3>
+                <p>Reliable security solutions for your property</p>
+                <a href="services.html#security-services">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="text-center mb-16">
+            <h2 style="font-size: 2.5rem; font-weight: bold; color: #0f172a; margin-bottom: 0.7rem;">What Our Clients Say</h2>
+            <p style="font-size:1.1rem; color:#64748b;">Trusted by leading commercial properties</p>
+          </div>
+          <div class="testimonials-list">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="review">"Exceptional service quality and professional approach. FixIt Pro Services has been our trusted partner for facility management."</div>
+              <div class="client">
+                <img src="https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Lulu Mall" />
+                <div>
+                  <div class="client-name">Lulu Mall</div>
+                  <div class="client-role">Commercial Client</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="review">"Outstanding technical maintenance services. Their team is highly skilled and responsive to our needs."</div>
+              <div class="client">
+                <img src="https://images.pexels.com/photos/1040173/pexels-photo-1040173.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Nexus Mall" />
+                <div>
+                  <div class="client-name">Nexus Mall</div>
+                  <div class="client-role">Commercial Client</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <div class="review">"Reliable and efficient services. We highly recommend FixIt Pro Services for comprehensive facility solutions."</div>
+              <div class="client">
+                <img src="https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg?auto=compress&cs=tinysrgb&w=300" alt="GSM Mall" />
+                <div>
+                  <div class="client-name">GSM Mall</div>
+                  <div class="client-role">Commercial Client</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to Get Started?</h2>
+          <p>Contact us today for a free consultation and quote</p>
+          <a href="contact.html">Get Free Quote</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="fixitpro_logo.jpg" alt="FixIt Pro Services" />
+            <div>
+              <h3>FixIt Pro</h3>
+              <p>Services</p>
+            </div>
+          </div>
+          <div class="footer-desc">
+            Professional maintenance and repair solutions for commercial and residential properties.
+          </div>
+          <div class="footer-social">
+            <a href="#">🌐</a>
+            <a href="#">🐦</a>
+            <a href="#">📸</a>
+            <a href="https://www.linkedin.com/in/fixitproservices" target="_blank" rel="noopener noreferrer">in</a>
+          </div>
+        </div>
+        <div class="footer-col footer-links">
+          <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:1rem;">Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-services">
+          <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:1rem;">Our Services</h3>
+          <ul>
+            <li><a href="services.html#facility-management">Facility Management</a></li>
+            <li><a href="services.html#technical-maintenance">Technical Maintenance</a></li>
+            <li><a href="services.html#cleaning-services">Cleaning Services</a></li>
+            <li><a href="services.html#security-services">Security Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:1rem;">Contact Info</h3>
+          <div>📞 +91 7013377216</div>
+          <div>✉️ info@fixitproservices.in</div>
+          <div>📍 India</div>
+          <div>⏰ 24/7 Emergency Service</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2024 FixIt Pro Services. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
